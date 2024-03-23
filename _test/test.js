@@ -1,0 +1,47 @@
+// Info: Test Cases
+'use strict';
+
+// Shared Dependencies
+var Lib = {};
+
+// Dependencies
+Lib.Utils = require('js-helper-utils');
+Lib.Debug = require('js-helper-debug')(Lib);
+const JsonTemplator = require('js-helper-templator-json')(Lib);
+
+
+////////////////////////////SIMILUTATIONS//////////////////////////////////////
+  //
+///////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////STAGE SETUP///////////////////////////////////////
+
+// Template file
+var template = {
+  '{{#each items}}': [
+    '{{this}}',
+    'Another paragraph {{this}}, this time a little bit longer to make sure, this line will be divided into at least two lines'
+  ]
+};
+
+// Input data
+var data = {
+  'items': [1, 2, 3, 4]
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////TESTS/////////////////////////////////////////
+
+// Transforming json
+console.log(
+  'transformJson(template, data)',
+  JsonTemplator.transformJson(
+    template,
+    data
+  )
+);
+
+///////////////////////////////////////////////////////////////////////////////

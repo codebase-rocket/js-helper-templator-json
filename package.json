@@ -1,0 +1,29 @@
+{
+  "name": "@codebase-rocket/js-helper-templator-json",
+  "description": "Boilerplate library. Compiles json templates with input data.",
+  "version": "1.0.0",
+  "main": "st.js",
+  "keywords": [],
+  "private": false,
+  "license": "Private",
+  "author": {
+    "name": "Himanshu"
+  },
+  "contributors": [
+    {
+      "name": "Prafful Kumar Singh"
+    }
+  ],
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "stjs": "0.x"
+  },
+  "peerDependencies": {
+    "js-helper-utils": "npm:@codebase-rocket/js-helper-utils@^1.0.0",
+    "js-helper-debug": "npm:@codebase-rocket/js-helper-debug@^1.0.0"
+  },
+  "devDependencies": {}
+}
